@@ -19,8 +19,6 @@ RUN wget -O nacos.tar.gz https://github.com/alibaba/nacos/releases/download/$NAC
 # -f 必须参数
 RUN tar -xvf nacos.tar.gz
 
-RUN cd nacos/bin
-
 EXPOSE 8848
 
-ENTRYPOINT sh startup.sh -m standalone
+ENTRYPOINT sh nacos/bin/startup.sh -m standalone
